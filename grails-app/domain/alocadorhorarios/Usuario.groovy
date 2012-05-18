@@ -21,7 +21,7 @@ class Usuario {
 	}
 
 	Set<Papel> getAuthorities() {
-		SecuserSecRole.findAllBySecuser(this).collect { it.secRole } as Set
+		UsuarioPapel.findAllBySecuser(this).collect { it.secRole } as Set
 	}
 
 	def beforeInsert() {

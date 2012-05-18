@@ -2,5 +2,5 @@ package alocadorhorarios
 
 class UsuarioController {
 
-   def scaffold = true
+	def scaffold = true
 }

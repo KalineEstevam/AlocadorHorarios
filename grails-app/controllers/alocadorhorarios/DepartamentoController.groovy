@@ -1,5 +1,6 @@
 package alocadorhorarios
 import grails.converters.JSON
+import grails.plugins.springsecurity.Secured
 
 import org.springframework.dao.DataIntegrityViolationException
 
@@ -7,6 +8,7 @@ class DepartamentoController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
+	@Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def index() {
         redirect(action: "list", params: params)
     }
